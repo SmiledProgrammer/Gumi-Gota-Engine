@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A939B2FE-19ED-4B57-A156-CC8686557B8F}</ProjectGuid>
+    <RootNamespace>GumiGotaGameEngine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\FreeImage\include;$(SolutionDir)Gumi Gota Game Engine\Gumi Gota\Gumi Gota\vendor\freetype\include;$(SolutionDir)Gumi Gota Game Engine\Gumi Gota\Gumi Gota\vendor\freetype-gl\freetype-gl-master;$(SolutionDir)Gumi Gota Game Engine\Gumi Gota\Gumi Gota\vendor\stb_image</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_LIB;WIN32;FT2_BUILD_LIBRARY;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;$(SolutionDir)Dependencies\FreeImage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\FreeImage\include;$(SolutionDir)Gumi Gota Game Engine\Gumi Gota\Gumi Gota\vendor\freetype\include;$(SolutionDir)Gumi Gota Game Engine\Gumi Gota\Gumi Gota\vendor\freetype-gl\freetype-gl-master;$(SolutionDir)Gumi Gota Game Engine\Gumi Gota\Gumi Gota\vendor\stb_image</AdditionalIncludeDirectories>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <PreprocessorDefinitions>GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;_LIB;WIN32;FT2_BUILD_LIBRARY;NDEBUG;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2015;$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;$(SolutionDir)Dependencies\FreeImage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>FreeImage.lib;glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Gumi Gota\Engine Tester\src\Main.cpp" />
+    <ClCompile Include="Gumi Gota\Engine Tester\src\MoveableCamera.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Camera2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Group2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Label2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Layer2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Light2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Renderable2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Scene2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\2D\Sprite2D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Camera3D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Light3D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\Particle.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\ParticleGroup.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\DirectionParticleSystem.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\ParticleSystem.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Renderable3D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Group3D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Model.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Renderer3D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\CubeMap.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\Scene3D.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\SpreadParticleSystem.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\3D\water\WaterTile.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\buffers\FrameBuffer.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\buffers\IndexBuffer.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\buffers\VertexArray.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\buffers\VertexBuffer.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\Color.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\ErrorHandling.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\OpenGLHelpFunctions.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\Shader.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\Texture.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\graphics\Window.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\general\BasicOperations.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\geometry\AngleTransformations.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\geometry\VectorTransformations.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\matrices\matrix4.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\trigonometry\Trigonometry.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\vectors\vector2.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\vectors\vector3.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\maths\vectors\vector4.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\utils\ModelLoader.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\utils\Sorting.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\src\utils\Timer.cpp" />
+    <ClCompile Include="Gumi Gota\Gumi Gota\vendor\stb_image\stb_image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Gumi Gota\Engine Tester\src\MoveableCamera.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\Graphics.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Camera2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Group2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Label2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Layer2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Light2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Renderable2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Scene2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\2D\Sprite2D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Camera3D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Light3D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\Particle.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\ParticleGroup.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\DirectionParticleSystem.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\ParticleSystem.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Renderable3D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Group3D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Model.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Renderer3D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\CubeMap.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\Scene3D.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\particles\SpreadParticleSystem.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\3D\water\WaterTile.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\buffers\FrameBuffer.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\buffers\IndexBuffer.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\buffers\VertexArray.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\buffers\VertexBuffer.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\Color.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\ErrorHandling.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\OpenGLHelpFunctions.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\Shader.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\Texture.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\graphics\Window.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\GumiGota.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\Log.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\Maths.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\general\BasicOperations.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\general\Constants.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\geometry\AngleTransformations.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\geometry\VectorTransformations.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\matrices\matrix4.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\trigonometry\Trigonometry.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\vectors\vector2.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\vectors\vector3.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\maths\vectors\vector4.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\Utils.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\utils\ModelLoader.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\utils\Sorting.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\src\utils\Timer.h" />
+    <ClInclude Include="Gumi Gota\Gumi Gota\vendor\stb_image\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\BasicLight3D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\Color2D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\ColorLight2D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\NormalParticle3D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\TextureLight2D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\Texture2D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\InstanceParticle3D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\Skybox3D.shader" />
+    <None Include="Gumi Gota\Gumi Gota\res\shaders\WaterLight3D.shader" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
