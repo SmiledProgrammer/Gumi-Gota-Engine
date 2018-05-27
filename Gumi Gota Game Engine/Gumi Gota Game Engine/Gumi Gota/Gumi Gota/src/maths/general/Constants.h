@@ -1,0 +1,11 @@
+#ifndef GUMIGOTA_CONSTANTS_H
+#define GUMIGOTA_CONSTANTS_H
+
+
+
+/* CONSTANTS */
+#define PI 3.14159265358979323846f
+
+
+
+#endif
